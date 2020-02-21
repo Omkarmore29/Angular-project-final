@@ -13,7 +13,7 @@ public class NewTest {
 	
 	@BeforeTest
 	  public void beforeTest() throws Exception {
-		  System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "/home/omkar/Demo/Angular-project-final/chromedriver");
 			driver=new ChromeDriver();
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
