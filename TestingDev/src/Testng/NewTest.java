@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 
 public class NewTest {
 	WebDriver driver;
-  System.out.println("PLZ Come...");
+  
 	@BeforeTest
 	  public void beforeTest() throws Exception {
 		  System.setProperty("webdriver.chrome.driver", "/home/omkar/Demo/Angular-project-final/chromedriver");
@@ -17,6 +17,7 @@ public class NewTest {
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
 			Thread.sleep(1000);
+      System.out.println("PLZ Come...");
 	  }
 
   @Test
@@ -40,11 +41,13 @@ public class NewTest {
 
 		driver.findElement(By.xpath("/html[1]/body[1]/app[1]/nav[1]/div[1]/a[2]")).click();
 		Thread.sleep(2000);
+    System.out.println("PLZ Come...");
   }
   
   @AfterTest
   public void afterTest() {
     driver.close();
+    System.out.println("PLZ Come...");
   }
 
 }
