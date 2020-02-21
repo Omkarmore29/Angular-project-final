@@ -26,7 +26,7 @@ public class NewTest {
 		System.out.println("Run....");
 	}
 
-  @Test (priority=2)
+  @Test (dependsOnMethods={"my"}, alwaysRun = true ,priority=2)
   public void f() throws Exception {
 	    driver.findElement(By.xpath("/html[1]/body[1]/app[1]/div[1]/div[1]/div[1]/div[1]/ng-component[1]/form[1]/div[1]/input[1]")).sendKeys("Omkar");
 		driver.findElement(By.xpath("//div[2]//input[1]")).sendKeys("More");
