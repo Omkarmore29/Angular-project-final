@@ -9,6 +9,7 @@ import org.testng.annotations.AfterTest;
 
 public class NewTest {
 	WebDriver driver;
+  System.out.println("PLZ Come...");
 	@BeforeTest
 	  public void beforeTest() throws Exception {
 		  System.setProperty("webdriver.chrome.driver", "/home/omkar/Demo/Angular-project-final/chromedriver");
