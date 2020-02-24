@@ -5,14 +5,17 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 
 public class NewTest {
 	WebDriver driver;
 	@BeforeTest
 	  public void beforeTest() throws Exception {
-		  System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-			driver=new ChromeDriver();
+		  System.setProperty("webdriver.chrome.driver", "/home/omkar/Demo/Angular-project-final/chromedriver");
+		    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless");
+		    driver = new ChromeDriver(options);
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
 			Thread.sleep(1000);
@@ -43,6 +46,7 @@ public class NewTest {
   
   @AfterTest
   public void afterTest() {
+	                 driver.close();
   }
 
-}
+
