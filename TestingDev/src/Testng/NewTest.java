@@ -12,7 +12,7 @@ public class NewTest {
 	WebDriver driver;
 	@BeforeTest
 	  public void beforeTest() throws Exception {
-		  System.setProperty("webdriver.chrome.driver", "/home/omkar/Demo/Angular-project-final/chromedriver");
+		  System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Demo/chromedriver");
 		    ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
 		    driver = new ChromeDriver(options);
